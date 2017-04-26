@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170418 16:28:36.341" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="C:\Test\robot-scripts\readability\Tests\Amazon.robot" id="s1" name="Amazon">
+<test id="s1-t1" name="Logged out user should be able to search for products">
+<kw type="setup" name="Begin Web Test" library="Common">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170418 16:28:36.529" level="INFO">Opening browser 'chrome' to base url 'about:blank'</msg>
+<msg timestamp="20170418 16:28:38.572" level="DEBUG">POST http://127.0.0.1:52006/session {"requiredCapabilities": {}, "desiredCapabilities": {"platform": "ANY", "browserName": "chrome", "version": "", "chromeOptions": {"args": [], "extensions": []}, "javascriptEnabled": true}}</msg>
+<msg timestamp="20170418 16:28:40.245" level="DEBUG">Finished Request</msg>
+<msg timestamp="20170418 16:28:40.245" level="DEBUG">POST http://127.0.0.1:52006/session/07ddf39661a90519b2b5a58ce1ddf536/timeouts/async_script {"sessionId": "07ddf39661a90519b2b5a58ce1ddf536", "ms": 5000.0}</msg>
+<msg timestamp="20170418 16:28:40.246" level="DEBUG">Finished Request</msg>
+<msg timestamp="20170418 16:28:40.247" level="DEBUG">POST http://127.0.0.1:52006/session/07ddf39661a90519b2b5a58ce1ddf536/timeouts/implicit_wait {"sessionId": "07ddf39661a90519b2b5a58ce1ddf536", "ms": 0.0}</msg>
+<msg timestamp="20170418 16:28:40.248" level="DEBUG">Finished Request</msg>
+<msg timestamp="20170418 16:28:40.248" level="DEBUG">POST http://127.0.0.1:52006/session/07ddf39661a90519b2b5a58ce1ddf536/url {"url": "about:blank", "sessionId": "07ddf39661a90519b2b5a58ce1ddf536"}</msg>
+<msg timestamp="20170418 16:28:40.286" level="DEBUG">Finished Request</msg>
+<msg timestamp="20170418 16:28:40.286" level="DEBUG">Opened browser with session id 07ddf39661a90519b2b5a58ce1ddf536</msg>
+<status status="PASS" endtime="20170418 16:28:40.286" starttime="20170418 16:28:36.529"></status>
+</kw>
+<status status="PASS" endtime="20170418 16:28:40.286" starttime="20170418 16:28:36.529"></status>
+</kw>
+<kw name="Search for Products" library="AmazonApp">
+<kw name="Load" library="LandingPage">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${START_URL}</arg>
+</arguments>
+<msg timestamp="20170418 16:28:40.288" level="INFO">Opening url 'https://www.amazon.com'</msg>
+<msg timestamp="20170418 16:28:40.288" level="DEBUG">POST http://127.0.0.1:52006/session/07ddf39661a90519b2b5a58ce1ddf536/url {"url": "https://www.amazon.com", "sessionId": "07ddf39661a90519b2b5a58ce1ddf536"}</msg>
+<msg timestamp="20170418 16:28:52.311" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20170418 16:28:52.311" starttime="20170418 16:28:40.288"></status>
+</kw>
+<status status="PASS" endtime="20170418 16:28:52.311" starttime="20170418 16:28:40.287"></status>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Your Amazon.com</arg>
+</arguments>
+<msg timestamp="20170418 16:28:52.312" level="DEBUG">POST http://127.0.0.1:52006/session/07ddf39661a90519b2b5a58ce1ddf536/elements {"using": "xpath", "sessionId": "07ddf39661a90519b2b5a58ce1ddf536", "value": "//*[contains(., 'Your Amazon.com')]"}</msg>
+<msg timestamp="20170418 16:28:52.340" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20170418 16:28:52.341" starttime="20170418 16:28:52.312"></status>
+</kw>
+<status status="PASS" endtime="20170418 16:28:52.341" starttime="20170418 16:28:52.311"></status>
+</kw>
+<kw name="Verify product search box is available" library="TopNav">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>id=twotabsearchtextbox</arg>
+</arguments>
+<msg timestamp="20170418 16:28:52.342" level="DEBUG">POST http://127.0.0.1:52006/session/07ddf39661a90519b2b5a58ce1ddf536/elements {"using": "id", "sessionId": "07ddf39661a90519b2b5a58ce1ddf536", "value": "twotabsearchtextbox"}</msg>
+<msg timestamp="20170418 16:28:52.358" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20170418 16:28:52.358" starttime="20170418 16:28:52.342"></status>
+</kw>
+<status status="PASS" endtime="20170418 16:28:52.358" starttime="20170418 16:28:52.341"></status>
+</kw>
+<kw name="Enter a product name" library="TopNav">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${TOPNAV_SEARCH_BAR}</arg>
+<arg>${SEARCH_TERM}</arg>
+</arguments>
+<msg timestamp="20170418 16:28:52.359" level="INFO">Typing text 'lamborghini gallardo' into text field 'id=twotabsearchtextbox'</msg>
+<msg timestamp="20170418 16:28:52.359" level="DEBUG">POST http://127.0.0.1:52006/session/07ddf39661a90519b2b5a58ce1ddf536/elements {"using": "id", "sessionId": "07ddf39661a90519b2b5a58ce1ddf536", "value": "twotabsearchtextbox"}</msg>
+<msg timestamp="20170418 16:28:52.365" level="DEBUG">Finished Request</msg>
+<msg timestamp="20170418 16:28:52.365" level="DEBUG">POST http://127.0.0.1:52006/session/07ddf39661a90519b2b5a58ce1ddf536/element/0.2806918657089976-11/clear {"sessionId": "07ddf39661a90519b2b5a58ce1ddf536", "id": "0.2806918657089976-11"}</msg>
+<msg timestamp="20170418 16:28:52.387" level="DEBUG">Finished Request</msg>
+<msg timestamp="20170418 16:28:52.388" level="DEBUG">POST http://127.0.0.1:52006/session/07ddf39661a90519b2b5a58ce1ddf536/element/0.2806918657089976-11/value {"sessionId": "07ddf39661a90519b2b5a58ce1ddf536", "id": "0.2806918657089976-11", "value": ["l", "a", "m", "b", "o", "r", "g", "h", "i", "n", "i", " ", "g", "a", "l", "l", "a", "r", "d", "o"]}</msg>
+<msg timestamp="20170418 16:28:52.546" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20170418 16:28:52.546" starttime="20170418 16:28:52.359"></status>
+</kw>
+<status status="PASS" endtime="20170418 16:28:52.546" starttime="20170418 16:28:52.358"></status>
+</kw>
+<kw name="Click search product button" library="TopNav">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${TOPNAV_SEARCH_BUTTON}</arg>
+</arguments>
+<msg timestamp="20170418 16:28:52.547" level="INFO">Clicking button 'xpath=//*[@id="nav-search"]/form/div[2]/div/input'.</msg>
+<msg timestamp="20170418 16:28:52.548" level="DEBUG">POST http://127.0.0.1:52006/session/07ddf39661a90519b2b5a58ce1ddf536/elements {"using": "xpath", "sessionId": "07ddf39661a90519b2b5a58ce1ddf536", "value": "//*[@id=\"nav-search\"]/form/div[2]/div/input"}</msg>
+<msg timestamp="20170418 16:28:56.131" level="DEBUG">Finished Request</msg>
+<msg timestamp="20170418 16:28:56.132" level="DEBUG">GET http://127.0.0.1:52006/session/07ddf39661a90519b2b5a58ce1ddf536/element/0.2806918657089976-12/name {"sessionId": "07ddf39661a90519b2b5a58ce1ddf536", "id": "0.2806918657089976-12"}</msg>
+<msg timestamp="20170418 16:28:56.143" level="DEBUG">Finished Request</msg>
+<msg timestamp="20170418 16:28:56.144" level="DEBUG">POST http://127.0.0.1:52006/session/07ddf39661a90519b2b5a58ce1ddf536/element/0.2806918657089976-12/click {"sessionId": "07ddf39661a90519b2b5a58ce1ddf536", "id": "0.2806918657089976-12"}</msg>
+<msg timestamp="20170418 16:28:59.524" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20170418 16:28:59.524" starttime="20170418 16:28:52.547"></status>
+</kw>
+<status status="PASS" endtime="20170418 16:28:59.524" starttime="20170418 16:28:52.547"></status>
+</kw>
+<status status="PASS" endtime="20170418 16:28:59.524" starttime="20170418 16:28:40.287"></status>
+</kw>
+<kw name="Do some custom thing" library="AmazonApp">
+<kw name="Do Something Special" library="MyCustomLibrary">
+<msg timestamp="20170418 16:28:59.526" level="INFO">Doing something special</msg>
+<status status="PASS" endtime="20170418 16:28:59.526" starttime="20170418 16:28:59.526"></status>
+</kw>
+<status status="PASS" endtime="20170418 16:28:59.527" starttime="20170418 16:28:59.525"></status>
+</kw>
+<kw type="teardown" name="End Web Test" library="Common">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<msg timestamp="20170418 16:28:59.528" level="DEBUG">Closing browser with session id 07ddf39661a90519b2b5a58ce1ddf536</msg>
+<msg timestamp="20170418 16:28:59.528" level="DEBUG">DELETE http://127.0.0.1:52006/session/07ddf39661a90519b2b5a58ce1ddf536 {"sessionId": "07ddf39661a90519b2b5a58ce1ddf536"}</msg>
+<msg timestamp="20170418 16:29:02.613" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20170418 16:29:05.670" starttime="20170418 16:28:59.528"></status>
+</kw>
+<status status="PASS" endtime="20170418 16:29:05.670" starttime="20170418 16:28:59.527"></status>
+</kw>
+<tags>
+<tag>Test</tag>
+</tags>
+<status status="PASS" endtime="20170418 16:29:05.670" critical="yes" starttime="20170418 16:28:36.529"></status>
+</test>
+<status status="PASS" endtime="20170418 16:29:05.670" starttime="20170418 16:28:36.357"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">Test</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Amazon" pass="1">Amazon</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

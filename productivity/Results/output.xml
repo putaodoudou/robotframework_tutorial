@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170418 15:46:32.125" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="C:\Test\robot-scripts\productivity\tests" id="s1" name="Tests">
+<suite source="C:\Test\robot-scripts\productivity\tests\01__Feature_2.robot" id="s1-s1" name="Feature 2">
+<test id="s1-s1-t1" name="Feature 1 Test 1">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>This is test 1 of feature 2</arg>
+</arguments>
+<msg timestamp="20170418 15:46:32.234" level="INFO">This is test 1 of feature 2</msg>
+<status status="PASS" endtime="20170418 15:46:32.234" starttime="20170418 15:46:32.234"></status>
+</kw>
+<tags>
+<tag>foo</tag>
+</tags>
+<status status="PASS" endtime="20170418 15:46:32.234" critical="yes" starttime="20170418 15:46:32.234"></status>
+</test>
+<test id="s1-s1-t2" name="Feature 1 Test 2">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>This is test 2 of feature 2</arg>
+</arguments>
+<msg timestamp="20170418 15:46:32.234" level="INFO">This is test 2 of feature 2</msg>
+<status status="PASS" endtime="20170418 15:46:32.234" starttime="20170418 15:46:32.234"></status>
+</kw>
+<tags>
+<tag>bar</tag>
+</tags>
+<status status="PASS" endtime="20170418 15:46:32.234" critical="yes" starttime="20170418 15:46:32.234"></status>
+</test>
+<status status="PASS" endtime="20170418 15:46:32.234" starttime="20170418 15:46:32.203"></status>
+</suite>
+<suite source="C:\Test\robot-scripts\productivity\tests\02__Feature_3.robot" id="s1-s2" name="Feature 3">
+<test id="s1-s2-t1" name="Feature 1 Test 1">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>This is test 1 of feature 3</arg>
+</arguments>
+<msg timestamp="20170418 15:46:32.250" level="INFO">This is test 1 of feature 3</msg>
+<status status="PASS" endtime="20170418 15:46:32.250" starttime="20170418 15:46:32.250"></status>
+</kw>
+<tags>
+<tag>foo</tag>
+</tags>
+<status status="PASS" endtime="20170418 15:46:32.250" critical="yes" starttime="20170418 15:46:32.250"></status>
+</test>
+<test id="s1-s2-t2" name="Feature 1 Test 2">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>This is test 2 of feature 3</arg>
+</arguments>
+<msg timestamp="20170418 15:46:32.250" level="INFO">This is test 2 of feature 3</msg>
+<status status="PASS" endtime="20170418 15:46:32.250" starttime="20170418 15:46:32.250"></status>
+</kw>
+<tags>
+<tag>bar</tag>
+</tags>
+<status status="PASS" endtime="20170418 15:46:32.250" critical="yes" starttime="20170418 15:46:32.250"></status>
+</test>
+<status status="PASS" endtime="20170418 15:46:32.250" starttime="20170418 15:46:32.250"></status>
+</suite>
+<suite source="C:\Test\robot-scripts\productivity\tests\03__Feature_1.robot" id="s1-s3" name="Feature 1">
+<test id="s1-s3-t1" name="Feature 1 Test 1">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>This is test 1 of feature 1</arg>
+</arguments>
+<msg timestamp="20170418 15:46:32.265" level="INFO">This is test 1 of feature 1</msg>
+<status status="PASS" endtime="20170418 15:46:32.265" starttime="20170418 15:46:32.265"></status>
+</kw>
+<tags>
+<tag>foo</tag>
+</tags>
+<status status="PASS" endtime="20170418 15:46:32.265" critical="yes" starttime="20170418 15:46:32.265"></status>
+</test>
+<test id="s1-s3-t2" name="Feature 1 Test 2">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>This is test 2 of feature 1</arg>
+</arguments>
+<msg timestamp="20170418 15:46:32.265" level="INFO">This is test 2 of feature 1</msg>
+<status status="PASS" endtime="20170418 15:46:32.265" starttime="20170418 15:46:32.265"></status>
+</kw>
+<tags>
+<tag>bar</tag>
+</tags>
+<status status="PASS" endtime="20170418 15:46:32.265" critical="yes" starttime="20170418 15:46:32.265"></status>
+</test>
+<status status="PASS" endtime="20170418 15:46:32.281" starttime="20170418 15:46:32.265"></status>
+</suite>
+<status status="PASS" endtime="20170418 15:46:32.281" starttime="20170418 15:46:32.141"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="6">Critical Tests</stat>
+<stat fail="0" pass="6">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="3">bar</stat>
+<stat fail="0" pass="3">foo</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Tests" pass="6">Tests</stat>
+<stat fail="0" id="s1-s1" name="Feature 2" pass="2">Tests.Feature 2</stat>
+<stat fail="0" id="s1-s2" name="Feature 3" pass="2">Tests.Feature 3</stat>
+<stat fail="0" id="s1-s3" name="Feature 1" pass="2">Tests.Feature 1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

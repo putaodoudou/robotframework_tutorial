@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170418 15:24:45.888" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="C:\Test\robot-scripts\productivity\tests" id="s1" name="Tests">
+<suite source="C:\Test\robot-scripts\productivity\tests\Feature_1.robot" id="s1-s1" name="Feature 1">
+<test id="s1-s1-t1" name="Feature 1 Test 1">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>This is test 1 of feature 1</arg>
+</arguments>
+<msg timestamp="20170418 15:24:45.950" level="INFO">This is test 1 of feature 1</msg>
+<status status="PASS" endtime="20170418 15:24:45.950" starttime="20170418 15:24:45.950"></status>
+</kw>
+<tags>
+<tag>foo</tag>
+</tags>
+<status status="PASS" endtime="20170418 15:24:45.950" critical="yes" starttime="20170418 15:24:45.935"></status>
+</test>
+<test id="s1-s1-t2" name="Feature 1 Test 2">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>This is test 2 of feature 1</arg>
+</arguments>
+<msg timestamp="20170418 15:24:45.950" level="INFO">This is test 2 of feature 1</msg>
+<status status="PASS" endtime="20170418 15:24:45.950" starttime="20170418 15:24:45.950"></status>
+</kw>
+<kw name="Directory Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path points to an existing directory.</doc>
+<arguments>
+<arg>c:\\fake\\</arg>
+</arguments>
+<msg timestamp="20170418 15:24:45.950" level="FAIL">Directory 'c:\fake' does not exist.</msg>
+<status status="FAIL" endtime="20170418 15:24:45.950" starttime="20170418 15:24:45.950"></status>
+</kw>
+<tags>
+<tag>bar</tag>
+</tags>
+<status status="FAIL" endtime="20170418 15:24:45.950" critical="yes" starttime="20170418 15:24:45.950">Directory 'c:\fake' does not exist.</status>
+</test>
+<status status="FAIL" endtime="20170418 15:24:45.950" starttime="20170418 15:24:45.935"></status>
+</suite>
+<suite source="C:\Test\robot-scripts\productivity\tests\Feature_3.robot" id="s1-s2" name="Feature 3">
+<test id="s1-s2-t1" name="Feature 1 Test 1">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>This is test 1 of feature 3</arg>
+</arguments>
+<msg timestamp="20170418 15:24:45.966" level="INFO">This is test 1 of feature 3</msg>
+<status status="PASS" endtime="20170418 15:24:45.966" starttime="20170418 15:24:45.966"></status>
+</kw>
+<tags>
+<tag>foo</tag>
+</tags>
+<status status="PASS" endtime="20170418 15:24:45.966" critical="yes" starttime="20170418 15:24:45.966"></status>
+</test>
+<test id="s1-s2-t2" name="Feature 1 Test 2">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>This is test 2 of feature 3</arg>
+</arguments>
+<msg timestamp="20170418 15:24:45.966" level="INFO">This is test 2 of feature 3</msg>
+<status status="PASS" endtime="20170418 15:24:45.966" starttime="20170418 15:24:45.966"></status>
+</kw>
+<kw name="Directory Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path points to an existing directory.</doc>
+<arguments>
+<arg>c:\\fake\\</arg>
+</arguments>
+<msg timestamp="20170418 15:24:45.966" level="FAIL">Directory 'c:\fake' does not exist.</msg>
+<status status="FAIL" endtime="20170418 15:24:45.966" starttime="20170418 15:24:45.966"></status>
+</kw>
+<tags>
+<tag>bar</tag>
+</tags>
+<status status="FAIL" endtime="20170418 15:24:45.966" critical="yes" starttime="20170418 15:24:45.966">Directory 'c:\fake' does not exist.</status>
+</test>
+<status status="FAIL" endtime="20170418 15:24:45.981" starttime="20170418 15:24:45.950"></status>
+</suite>
+<status status="FAIL" endtime="20170418 15:24:45.981" starttime="20170418 15:24:45.888"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="2" pass="2">Critical Tests</stat>
+<stat fail="2" pass="2">All Tests</stat>
+</total>
+<tag>
+<stat fail="2" pass="0">bar</stat>
+<stat fail="0" pass="2">foo</stat>
+</tag>
+<suite>
+<stat fail="2" id="s1" name="Tests" pass="2">Tests</stat>
+<stat fail="1" id="s1-s1" name="Feature 1" pass="1">Tests.Feature 1</stat>
+<stat fail="1" id="s1-s2" name="Feature 3" pass="1">Tests.Feature 3</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
