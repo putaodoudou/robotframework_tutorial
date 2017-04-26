@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170227 16:32:01.383" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="c:\Test\robot-scripts\testproject\tests\amazon.robot" id="s1" name="Firefox">
+<test id="s1-t1" name="User must sign in to check out">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.amazon.com</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20170227 16:32:01.524" level="INFO">Opening browser 'chrome' to base url 'http://www.amazon.com'</msg>
+<status status="PASS" endtime="20170227 16:32:13.330" starttime="20170227 16:32:01.524"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Your Amazon.com</arg>
+</arguments>
+<status status="PASS" endtime="20170227 16:32:13.401" starttime="20170227 16:32:13.331"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=twotabsearchtextbox</arg>
+<arg>Ferrari 458</arg>
+</arguments>
+<msg timestamp="20170227 16:32:13.402" level="INFO">Typing text 'Ferrari 458' into text field 'id=twotabsearchtextbox'</msg>
+<status status="PASS" endtime="20170227 16:32:13.504" starttime="20170227 16:32:13.402"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>xpath=/html/body/div[1]/header/div/div[1]/div[3]/div/form/div[2]/div/input</arg>
+</arguments>
+<msg timestamp="20170227 16:32:13.505" level="INFO">Clicking button 'xpath=/html/body/div[1]/header/div/div[1]/div[3]/div/form/div[2]/div/input'.</msg>
+<status status="PASS" endtime="20170227 16:32:17.929" starttime="20170227 16:32:13.505"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>"Ferrari 458"</arg>
+</arguments>
+<status status="PASS" endtime="20170227 16:32:17.995" starttime="20170227 16:32:17.930"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=#result_0 a.s-access-detail-page</arg>
+</arguments>
+<msg timestamp="20170227 16:32:17.996" level="INFO">Clicking link 'css=#result_0 a.s-access-detail-page'.</msg>
+<status status="PASS" endtime="20170227 16:32:21.762" starttime="20170227 16:32:17.996"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Back to search results for "Ferrari 458"</arg>
+</arguments>
+<status status="PASS" endtime="20170227 16:32:21.810" starttime="20170227 16:32:21.762"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>id=add-to-cart-button</arg>
+</arguments>
+<msg timestamp="20170227 16:32:21.811" level="INFO">Clicking button 'id=add-to-cart-button'.</msg>
+<status status="PASS" endtime="20170227 16:32:22.870" starttime="20170227 16:32:21.811"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Added to Cart</arg>
+</arguments>
+<status status="PASS" endtime="20170227 16:32:22.896" starttime="20170227 16:32:22.870"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>Proceed to checkout (1 item)</arg>
+</arguments>
+<msg timestamp="20170227 16:32:22.897" level="INFO">Clicking link 'Proceed to checkout (1 item)'.</msg>
+<status status="PASS" endtime="20170227 16:32:23.627" starttime="20170227 16:32:22.897"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>signIn</arg>
+</arguments>
+<status status="PASS" endtime="20170227 16:32:23.666" starttime="20170227 16:32:23.628"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170227 16:32:29.620" starttime="20170227 16:32:23.667"></status>
+</kw>
+<doc>This is some basic information about the test</doc>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" endtime="20170227 16:32:29.622" critical="yes" starttime="20170227 16:32:01.523"></status>
+</test>
+<doc>This is some basic info about the whole suite</doc>
+<status status="PASS" endtime="20170227 16:32:29.627" starttime="20170227 16:32:01.387"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">Smoke</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Firefox" pass="1">Firefox</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,18 @@
+import mysql.connector
+
+cnx = mysql.connector.connect(user='root', password='ha_gre_da_1992',
+                              host='127.0.0.1',
+                              database='test')
+
+DB_NAME = 'test'
+
+TABLES['departments'] = (
+    "CREATE TABLE `departments` ("
+    "  `dept_no` char(4) NOT NULL,"
+    "  `dept_name` varchar(40) NOT NULL,"
+    "  PRIMARY KEY (`dept_no`), UNIQUE KEY `dept_name` (`dept_name`)"
+    ") ENGINE=InnoDB")
+
+add_employee = ("INSERT INTO employees "
+               "(first_name, last_name, hire_date, gender, birth_date) "
+               "VALUES (%s, %s, %s, %s, %s)")
